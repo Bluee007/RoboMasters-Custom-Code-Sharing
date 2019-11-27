@@ -1,0 +1,23 @@
+# 360
+
+#robomaster will spin around to the right, clockwide @ 600 /s rotations.
+
+def start():
+    chassis_ctrl.set_rotate_speed(600)
+    chassis_ctrl.rotate(rm.define.clockwise)
+    time.sleep(3)
+    
+    
+    
+    
+# 360 - Spraying
+
+#robomaster will spin around to the right, clockwide @ 300 /s rotations. After a second (1) delay, laser will fire @ 8 pulses continuously.
+
+def start():
+    chassis_ctrl.set_rotate_speed(300)
+    chassis_ctrl.rotate(rm.define.clockwise)
+    while True:
+        gun_ctrl.set_fire_count(8)
+        gun_ctrl.fire_continuous()
+        
